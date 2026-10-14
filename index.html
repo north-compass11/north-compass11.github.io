@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>占い師ノース｜「当たる」よりも、「腑に落ちる」占いを。</title>
+<meta name="description" content="数秘術・四柱推命・西洋占星術・九星気学の4つの視点から、生年月日であなたの“軸”を読み解く占い師ノースの鑑定。いまモニター鑑定を受け付けています。">
+<meta property="og:title" content="占い師ノース｜「当たる」よりも、「腑に落ちる」占いを。">
+<meta property="og:description" content="生年月日から、あなたの“軸”と“迷ったときのクセ”を読み解く鑑定。モニター鑑定 受付中。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;600;700&family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-900:#0b1328;
+    --navy-800:#111b36;
+    --navy-700:#18244a;
+    --gold:#d4b25e;
+    --gold-soft:#c9a961;
+    --gold-line:rgba(212,178,94,.45);
+    --red:#b23a3a;
+    --ink:#eef0f6;
+    --ink-soft:#b9c0d3;
+    --cream:#f6f1e6;
+    --cream-ink:#2a2a35;
+    --radius:14px;
+    --max:760px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;
+    background:var(--navy-900);
+    color:var(--ink);
+    font-family:"Noto Sans JP",system-ui,sans-serif;
+    line-height:1.9;
+    letter-spacing:.02em;
+    -webkit-font-smoothing:antialiased;
+  }
+  .nb{display:inline-block}
+  .mincho{font-family:"Shippori Mincho",serif}
+  a{color:var(--gold)}
+  .wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+
+  /* hero */
+  .hero{
+    position:relative;
+    min-height:92vh;
+    display:flex;align-items:center;justify-content:center;
+    text-align:center;
+    background:
+      radial-gradient(1200px 600px at 50% 0%, rgba(40,58,110,.55), transparent 70%),
+      linear-gradient(180deg,var(--navy-800),var(--navy-900));
+    overflow:hidden;
+    padding:72px 20px 56px;
+  }
+  .stars span{position:absolute;width:2px;height:2px;border-radius:50%;background:#e9dcae;opacity:.6}
+  .eyebrow{font-size:.78rem;letter-spacing:.5em;color:var(--gold);margin:0 0 28px}
+  .compass{width:118px;height:118px;margin:0 auto 20px;display:block}
+  .brand{display:flex;align-items:center;justify-content:center;gap:16px;color:var(--gold);letter-spacing:.45em;font-size:.95rem;margin:0 0 26px}
+  .brand::before,.brand::after{content:"";width:48px;height:1px;background:var(--gold-line)}
+  .hero h1{
+    font-family:"Shippori Mincho",serif;font-weight:600;
+    font-size:clamp(1.7rem,5.6vw,2.7rem);line-height:1.6;margin:0 0 18px;color:#f3e6bf;
+  }
+  .hero .lead{color:var(--ink-soft);font-size:1rem;margin:0 0 36px}
+  .btn{
+    display:inline-block;padding:15px 34px;border-radius:999px;
+    background:var(--gold);color:var(--navy-900);font-weight:600;text-decoration:none;
+    letter-spacing:.08em;box-shadow:0 6px 24px rgba(212,178,94,.25);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover{transform:translateY(-1px);box-shadow:0 10px 28px rgba(212,178,94,.35)}
+  .btn.ghost{background:transparent;color:var(--gold);border:1px solid var(--gold-line);box-shadow:none}
+  .badge{display:inline-block;margin-top:18px;font-size:.82rem;color:var(--ink-soft)}
+
+  /* sections */
+  section{padding:84px 0}
+  section.alt{background:var(--navy-800)}
+  .sec-head{text-align:center;margin-bottom:40px}
+  .sec-head .en{display:block;font-size:.72rem;letter-spacing:.45em;color:var(--gold);margin-bottom:10px}
+  .sec-head h2{font-family:"Shippori Mincho",serif;font-weight:600;font-size:clamp(1.35rem,4vw,1.8rem);margin:0;color:#f3e6bf}
+  .rule{display:flex;align-items:center;justify-content:center;gap:10px;margin:18px auto 0;color:var(--gold)}
+  .rule::before,.rule::after{content:"";width:64px;height:1px;background:var(--gold-line)}
+  p{margin:0 0 1.2em}
+
+  .points{display:grid;gap:18px}
+  .point{
+    border:1px solid var(--gold-line);border-radius:var(--radius);
+    padding:24px 24px 8px;background:rgba(255,255,255,.02)
+  }
+  .point h3{font-family:"Shippori Mincho",serif;font-size:1.12rem;margin:0 0 10px;color:var(--gold)}
+  .point .num{font-size:.8rem;letter-spacing:.3em;color:var(--ink-soft);display:block;margin-bottom:6px}
+
+  .checks{list-style:none;padding:0;margin:0 auto;max-width:560px}
+  .checks li{position:relative;padding:14px 0 14px 34px;border-bottom:1px solid rgba(212,178,94,.18)}
+  .checks li::before{content:"";position:absolute;left:4px;top:23px;width:14px;height:8px;border-left:2px solid var(--gold);border-bottom:2px solid var(--gold);transform:rotate(-45deg)}
+
+  .profile{display:grid;grid-template-columns:96px 1fr;gap:24px;align-items:start}
+  .profile .icon{width:96px;height:96px;border-radius:50%;border:1px solid var(--gold-line);display:flex;align-items:center;justify-content:center;background:var(--navy-900)}
+  .profile .icon svg{width:64px;height:64px}
+
+  .arts{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+  .art{border:1px solid var(--gold-line);border-radius:var(--radius);padding:20px}
+  .art h3{font-family:"Shippori Mincho",serif;margin:0 0 6px;color:var(--gold);font-size:1.05rem}
+  .art .en{font-size:.7rem;letter-spacing:.25em;color:var(--ink-soft)}
+  .art p{font-size:.92rem;margin:.6em 0 0;color:var(--ink-soft)}
+
+  .sample{
+    background:var(--cream);color:var(--cream-ink);border-radius:var(--radius);
+    padding:32px 28px;position:relative;box-shadow:0 18px 40px rgba(0,0,0,.35)
+  }
+  .sample .tag{display:inline-block;font-size:.72rem;letter-spacing:.2em;color:#8b6b2a;border:1px solid #c9a961;border-radius:999px;padding:2px 12px;margin-bottom:14px}
+  .sample h3{font-family:"Shippori Mincho",serif;font-size:1.2rem;margin:0 0 16px;color:#1d2340}
+  .sample .meta{font-size:.82rem;color:#6b6b78;margin-bottom:18px}
+  .sample p{font-family:"Shippori Mincho",serif;font-size:1rem;line-height:2.05}
+  .sample .note{font-family:"Noto Sans JP",sans-serif;font-size:.78rem;color:#7a7a86;margin:12px 0 0}
+
+  .monitor{border:1px solid var(--gold);border-radius:var(--radius);padding:32px 28px;background:linear-gradient(180deg,rgba(212,178,94,.08),rgba(212,178,94,.02))}
+  .spec{display:grid;grid-template-columns:7.5em 1fr;gap:12px 18px;margin:0 0 26px}
+  .spec dt{color:var(--gold);font-weight:500}
+  .spec dd{margin:0}
+  .steps{counter-reset:s;list-style:none;padding:0;margin:0 0 28px}
+  .steps li{counter-increment:s;position:relative;padding:0 0 18px 46px}
+  .steps li::before{content:counter(s);position:absolute;left:0;top:2px;width:30px;height:30px;border-radius:50%;border:1px solid var(--gold);color:var(--gold);display:flex;align-items:center;justify-content:center;font-size:.85rem}
+  .center{text-align:center}
+
+  details{border-bottom:1px solid rgba(212,178,94,.2);padding:16px 0}
+  summary{cursor:pointer;font-weight:500;list-style:none;position:relative;padding-right:28px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:"+";position:absolute;right:4px;top:-2px;color:var(--gold);font-size:1.3rem}
+  details[open] summary::after{content:"−"}
+  details p{margin:12px 0 0;color:var(--ink-soft)}
+
+  .small{font-size:.85rem;color:var(--ink-soft)}
+  footer{padding:48px 20px 64px;text-align:center;border-top:1px solid rgba(212,178,94,.18)}
+  footer .sns{display:flex;gap:20px;justify-content:center;margin:16px 0 22px}
+  footer .copy{font-size:.75rem;color:#7d86a0;letter-spacing:.2em}
+
+  @media (max-width:560px){
+    section{padding:64px 0}
+    .arts{grid-template-columns:1fr}
+    .profile{grid-template-columns:1fr;text-align:center}
+    .profile .icon{margin:0 auto}
+    .spec{grid-template-columns:1fr;gap:2px 0}
+    .spec dd{margin-bottom:12px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<header class="hero">
+  <div class="stars" aria-hidden="true">
+    <span style="top:12%;left:14%"></span><span style="top:22%;left:82%"></span>
+    <span style="top:68%;left:9%"></span><span style="top:80%;left:88%"></span>
+    <span style="top:40%;left:93%"></span><span style="top:56%;left:4%"></span>
+    <span style="top:8%;left:60%"></span><span style="top:90%;left:42%"></span>
+  </div>
+  <div>
+    <p class="eyebrow">NORTH DIVINATION</p>
+    <svg class="compass" viewBox="0 0 120 120" aria-hidden="true">
+      <circle cx="60" cy="60" r="52" fill="none" stroke="#d4b25e" stroke-width="1.6"/>
+      <circle cx="60" cy="60" r="43" fill="none" stroke="#d4b25e" stroke-width="1" opacity=".7"/>
+      <path d="M60 4v10M60 106v10M4 60h10M106 60h10" stroke="#d4b25e" stroke-width="1.6"/>
+      <circle cx="31" cy="27" r="1.6" fill="#d4b25e"/><circle cx="91" cy="31" r="1.6" fill="#d4b25e"/>
+      <circle cx="27" cy="88" r="1.6" fill="#d4b25e"/><circle cx="92" cy="90" r="1.6" fill="#d4b25e"/>
+      <path d="M60 18 L68 60 L52 60 Z" fill="#b23a3a"/>
+      <path d="M60 102 L52 60 L68 60 Z" fill="#d4b25e"/>
+      <circle cx="60" cy="60" r="5" fill="#ecd48f"/>
+    </svg>
+    <p class="brand">NORTH</p>
+    <h1><span class="nb">「当たる」よりも、</span><span class="nb">「腑に落ちる」</span><span class="nb">占いを。</span></h1>
+    <p class="lead"><span class="nb">生年月日から、</span><span class="nb">あなたの“軸”と</span><span class="nb">“迷ったときのクセ”を</span><span class="nb">読み解く鑑定です。</span></p>
+    <a class="btn" href="#monitor">モニター鑑定について見る</a>
+    <div class="badge"><span class="nb">いま、先着10名さまの</span><span class="nb">モニター鑑定を受け付けています</span></div>
+  </div>
+</header>
+
+<!-- ===== ABOUT 腑に落ちる ===== -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="en">CONCEPT</span>
+      <h2>「腑に落ちる」占いとは</h2>
+      <div class="rule">✦</div>
+    </div>
+    <p>占いの結果を読んで、「当たってる」「外れてる」で終わってしまったことはありませんか。</p>
+    <p>ノースが大切にしているのは、当てることよりも、読んだあとに「そういうことか」と自分のことが少しわかる感覚です。説明のつかなかったモヤモヤに名前がつくと、次にどう動くかを、自分で選びやすくなります。</p>
+    <div class="points">
+      <div class="point">
+        <span class="num">POINT 01</span>
+        <h3>断定しません</h3>
+        <p>「必ずこうなる」とは言いません。生まれ持った傾向を、選ぶための材料としてお伝えします。</p>
+      </div>
+      <div class="point">
+        <span class="num">POINT 02</span>
+        <h3>「なぜそう読めるか」を添えます</h3>
+        <p>どの占術の、どの星や数字からそう読めるのかを書き添えます。根拠が見えると、自分の言葉で受け止めやすくなります。</p>
+      </div>
+      <div class="point">
+        <span class="num">POINT 03</span>
+        <h3>次の一歩につなげます</h3>
+        <p>性格の説明だけで終わらず、「迷ったとき、どう考えるとラクになるか」というヒントまでお届けします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOR WHOM ===== -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="en">FOR YOU</span>
+      <h2>こんな方に</h2>
+      <div class="rule">✦</div>
+    </div>
+    <ul class="checks">
+      <li>転職を考えているけれど、何を軸に選べばいいかわからない</li>
+      <li>今の職場での立ち位置に、どこかしっくりきていない</li>
+      <li>人間関係に疲れて、ちょうどいい距離感がわからなくなっている</li>
+      <li>「このままでいいのかな」と、ふと立ち止まることがある</li>
+      <li>占いは好き。でも、読んで終わりになるのはもったいないと感じる</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== PROFILE ===== -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="en">PROFILE</span>
+      <h2>占い師ノースについて</h2>
+      <div class="rule">✦</div>
+    </div>
+    <div class="profile">
+      <div class="icon" aria-hidden="true">
+        <svg viewBox="0 0 120 120"><circle cx="60" cy="60" r="50" fill="none" stroke="#d4b25e" stroke-width="2"/><path d="M60 16 L69 60 L51 60 Z" fill="#b23a3a"/><path d="M60 104 L51 60 L69 60 Z" fill="#d4b25e"/><circle cx="60" cy="60" r="6" fill="#ecd48f"/></svg>
+      </div>
+      <div>
+        <p>はじめまして、ノースです。数秘術・四柱推命・西洋占星術・九星気学の4つの占術を使って、鑑定をしています。</p>
+        <p>以前は、キャリア相談の活動をしていました。人が迷ったり立ち止まったりする場面に向き合う中で、「答えを渡す」よりも「自分で選べるように整理する」ほうが、その人の力になると感じてきました。</p>
+        <p>「ノース」の名前は、北極星から。迷ったときに見上げれば方角がわかる、そんな目印になれたらと思っています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOUR ARTS ===== -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="en">FOUR PERSPECTIVES</span>
+      <h2>4つの視点で読み解きます</h2>
+      <div class="rule">✦</div>
+    </div>
+    <div class="arts">
+      <div class="art"><h3>数秘術</h3><span class="en">NUMEROLOGY</span><p>生年月日を数字にして、人生で大切にしやすいテーマを読み解きます。</p></div>
+      <div class="art"><h3>四柱推命</h3><span class="en">FOUR PILLARS</span><p>生まれた日の干（日主）を中心に、持って生まれた資質の「型」を見ます。</p></div>
+      <div class="art"><h3>西洋占星術</h3><span class="en">ASTROLOGY</span><p>太陽や月の星座から、外に見せる顔と、素の自分の感じ方を読みます。</p></div>
+      <div class="art"><h3>九星気学</h3><span class="en">NINE STAR KI</span><p>本命星・月命星から、ふだんの動き方や人との関わり方のクセを読みます。</p></div>
+    </div>
+    <p class="small center" style="margin-top:22px">1つの占術だけでは見えにくいことも、4つを重ねると「やっぱりそうか」と輪郭がはっきりしてきます。</p>
+  </div>
+</section>
+
+<!-- ===== SAMPLE ===== -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="en">SAMPLE</span>
+      <h2>鑑定の一部をご紹介</h2>
+      <div class="rule">✦</div>
+    </div>
+    <div class="sample">
+      <span class="tag">鑑定例（架空の方）</span>
+      <h3>人のために動ける力と、後回しにしがちな「自分の希望」</h3>
+      <div class="meta">1990年11月3日生まれの方の場合　／　数秘術・九星気学より</div>
+      <p>ライフパスナンバーは「6」。身近な人を支え、その場を整えることに自然と力を注ぎやすい数字とされます。九星気学の本命星は「一白水星」。水のように、相手に合わせて形を変えられる柔らかさを持つと言われる星です。</p>
+      <p>2つを重ねて見えてくるのは、人のために動くことが苦にならない一方で、自分の希望をつい後回しにしやすい、というクセかもしれません。</p>
+      <p>迷ったときは、「誰のためか」ではなく「自分はどうしたいか」を、一度だけ紙に書き出してみてください。答えはもう、あなたの中にあることが多いはずです。</p>
+      <p class="note">※実際のスタンダード鑑定では、4つの占術それぞれの読み解きと、それらを重ねたまとめをお届けします。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MONITOR ===== -->
+<section class="alt" id="monitor">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="en">MONITOR</span>
+      <h2>モニター鑑定のご案内</h2>
+      <div class="rule">✦</div>
+    </div>
+    <div class="monitor">
+      <p>鑑定をより良いものにするため、感想をお聞かせいただけるモニターの方を募集しています。</p>
+      <dl class="spec">
+        <dt>料金</dt><dd>無料</dd>
+        <dt>募集人数</dt><dd>先着10名さま（定員になりしだい締め切ります）</dd>
+        <dt>鑑定内容</dt><dd><strong>スタンダード鑑定</strong>（ふだんの有料プランと同じ内容です）<br>数秘術（ライフパスナンバー）・四柱推命（日主）・西洋占星術（太陽星座・月星座）・九星気学（本命星・月命星）の4つの視点から、あなたの“軸”と“迷ったときのクセ”を読み解き、最後に4つを重ねたまとめをお届けします</dd>
+        <dt>必要な情報</dt><dd>生年月日のみ（出生時刻・出生地は不要です）</dd>
+        <dt>お届け</dt><dd>お申し込みから1週間以内に、メールでお届けします</dd>
+        <dt>お願い</dt><dd>鑑定をお読みいただいたあと、かんたんな感想をお送りください。いただいた感想は、お名前を出さない形で、このページやSNSでご紹介させていただくことがあります（掲載を希望されない場合は、その旨をお知らせください）</dd>
+      </dl>
+      <ol class="steps">
+        <li>下のボタンから、申し込みフォームにご記入ください</li>
+        <li>ノースから、受付のご連絡をメールでお送りします</li>
+        <li>1週間以内に、鑑定をメールでお届けします</li>
+        <li>お読みいただいたら、感想をお送りください</li>
+      </ol>
+      <div class="center">
+        <a class="btn" href="https://docs.google.com/forms/d/1e0LxF5zqXciYS_o8W0yIi-A_h0aYEdB6hAwoOBVTqr0/viewform" id="entry-link" target="_blank" rel="noopener">モニター鑑定に申し込む</a>
+        <p class="small" style="margin-top:14px">申し込みフォーム（Google フォーム）が開きます</p>
+      </div>
+    </div>
+    <div class="point" style="margin-top:22px">
+      <span class="num">FULL COURSE</span>
+      <h3>さらに詳しく知りたい方へ ― フルコース鑑定</h3>
+      <p>出生時刻と出生地がわかる方には、スタンダードの内容に加えて、西洋占星術の<strong>上昇宮</strong>（人から見た第一印象や、物事の始め方）と、九星気学の<strong>傾斜宮</strong>（無意識の動き方のクセ）まで読み解く「フルコース鑑定」もご用意しています。</p>
+      <p class="small">フルコースは有料（4,000円）で、ココナラで受け付けています。<a href="https://coconala.com/users/6293104" target="_blank" rel="noopener">ココナラの出品ページを見る</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="en">FAQ</span>
+      <h2>よくあるご質問</h2>
+      <div class="rule">✦</div>
+    </div>
+    <details><summary>本当に無料ですか？</summary><p>はい、モニター鑑定は無料です。あとから料金をお願いしたり、ほかの商品をおすすめしたりすることはありません。</p></details>
+    <details><summary>生年月日だけで、何がわかるのですか？</summary><p>4つの占術とも、生年月日から計算できる星や数字をもとに読み解きます。モニター鑑定（スタンダード）は生年月日だけで鑑定します。出生時刻・出生地まで使うと、上昇宮や傾斜宮など、さらに細かいところまで読めます（フルコース）。</p></details>
+    <details><summary>悪いことを言われないか不安です</summary><p>不安をあおる言い方や、「必ずこうなる」という断定はしません。どの性質にも、活かし方と付き合い方があるという前提でお伝えします。</p></details>
+    <details><summary>鑑定の結果は、どう受け止めればいいですか？</summary><p>ご自身で判断するための、ひとつの材料としてご活用ください。医療・法律・お金に関わる判断については、専門家にご相談ください。</p></details>
+  </div>
+</section>
+
+<!-- ===== PRIVACY ===== -->
+<section class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="en">PRIVACY</span>
+      <h2>個人情報の取り扱いについて</h2>
+      <div class="rule">✦</div>
+    </div>
+    <p class="small">お申し込みの際にいただくお名前（ニックネーム可）・メールアドレス・生年月日は、鑑定の作成とお届け、および感想のお願いのためにのみ使用します。ご本人の同意なく第三者に提供することはありません。感想をご紹介する場合も、お名前や生年月日など、個人がわかる情報は掲載しません。鑑定のお届けから6か月が過ぎた情報は削除します。お問い合わせは、申し込み後にお送りするメールにご返信ください。</p>
+  </div>
+</section>
+
+<footer>
+  <p class="mincho" style="color:#f3e6bf;margin:0 0 6px"><span class="nb">「当たる」よりも、</span><span class="nb">「腑に落ちる」占いを。</span></p>
+  <div class="sns">
+    <a href="https://x.com/north_compass11" target="_blank" rel="noopener">X</a>
+    <a href="https://www.instagram.com/north_compass11/" target="_blank" rel="noopener">Instagram</a>
+  </div>
+  <div class="copy">© NORTH ／ 占い師ノース</div>
+</footer>
+
+</body>
+</html>
