@@ -2,6 +2,14 @@
 <html lang="ja">
 <head>
 <meta charset="utf-8">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WF13KPPTMR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-WF13KPPTMR');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>占い師ノース｜「当たる」よりも、「腑に落ちる」占いを。</title>
 <meta name="description" content="数秘術・四柱推命・西洋占星術・九星気学の4つの視点から、生年月日であなたの“軸”を読み解く占い師ノースの鑑定。いまモニター鑑定を受け付けています。">
@@ -429,6 +437,7 @@
       <div class="rule">✦</div>
     </div>
     <p class="small">お申し込みの際にいただくお名前（ニックネーム可）・メールアドレス・生年月日（DMでいただいた生年月日を含みます）は、鑑定の作成とお届け、および感想のお願いのためにのみ使用します。ご本人の同意なく第三者に提供することはありません。感想をご紹介する場合も、お名前や生年月日など、個人がわかる情報は掲載しません。鑑定のお届けから6か月が過ぎた情報は削除します。お問い合わせは、申し込み後にお送りするメールにご返信ください。</p>
+    <p class="small">このページでは、閲覧状況を把握してページを改善するために、Google アナリティクスを使用しています。Google アナリティクスは Cookie を使ってデータを収集しますが、お名前など個人を特定する情報は含まれません。収集されたデータは Google のプライバシーポリシーに基づいて管理されます。Cookie はブラウザの設定で無効にできます。</p>
   </div>
 </section>
 
@@ -441,5 +450,11 @@
   <div class="copy">© NORTH ／ 占い師ノース</div>
 </footer>
 
+<script>
+  // 申し込みボタンのクリックを GA4 に送る
+  document.getElementById('entry-link').addEventListener('click', function () {
+    gtag('event', 'apply_click', { link_url: this.href });
+  });
+</script>
 </body>
 </html>
