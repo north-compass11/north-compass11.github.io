@@ -8,7 +8,8 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-  gtag('config', 'G-WF13KPPTMR');
+  // STORES(ネットショップ)への移動を同じ人の流れとして数える(クロスドメイン、2026-11-17)
+  gtag('config', 'G-WF13KPPTMR', { linker: { domains: ['north-compass11.stores.jp'] } });
 </script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>占い師ノース｜「当たる」よりも、「腑に落ちる」占いを。</title>
